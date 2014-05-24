@@ -1,0 +1,35 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2014-05-24 12:29:18
+project --topLevelPackage javaEEWeather0524 --projectName javaEEWeather0524
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+logging setup --level INFO
+// script --file setup.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2014-05-24 12:29:20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2014-05-24 12:29:22
+entity jpa --class ~.domain.Weather  --sequenceName WEATHER_SEQ
+ field number --fieldName temperature --type java.lang.Integer --primitive --notNull
+ field string --fieldName description --notNull
+ field date --fieldName Mydate --type java.util.Date --notNull
+ field number --fieldName Myid --type java.lang.Long --primitive --notNull
+entity jpa --class ~.domain.City  --sequenceName CITY_SEQ
+ field number --fieldName Myid --type java.lang.Long --primitive --notNull
+ field string --fieldName Myname --notNull
+entity jpa --class ~.domain.MyUser  --sequenceName MYUSER_SEQ
+ field string --fieldName Mypassword --notNull
+ field number --fieldName Myid --type java.lang.Long --primitive --notNull
+ field string --fieldName Myname --notNull
+field reference --fieldName city --type ~.domain.City --class  ~.domain.Weather --cardinality MANY_TO_ONE
+field set --fieldName weather --type ~.domain.Weather --class  ~.domain.City --cardinality ONE_TO_MANY
+field set --fieldName Myuser --type ~.domain.MyUser --class  ~.domain.City --cardinality MANY_TO_MANY
+field set --fieldName city --type ~.domain.City --class  ~.domain.MyUser --cardinality MANY_TO_MANY
+// script --file entities.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2014-05-24 12:29:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2014-05-24 12:29:27
+web mvc setup
+web mvc all --package ~.web
+web mvc finder all
+web mvc language --code en
+// script --file webmvc.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2014-05-24 12:29:32

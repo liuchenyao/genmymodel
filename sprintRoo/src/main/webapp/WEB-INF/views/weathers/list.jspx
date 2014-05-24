@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_javaeeweather0524_domain_Weather" items="${weathers}" z="4KBh13ySP8rySRNF3qMhBs0lSo0=">
+        <table:table data="${weathers}" id="l_javaeeweather0524_domain_Weather" path="/weathers" z="zZIeLEibF6RekZJNy36ci/087wo=">
+            <table:column id="c_javaeeweather0524_domain_Weather_temperature" property="temperature" z="SEubrFS6LpyAJmuZskvyjLybEwQ="/>
+            <table:column id="c_javaeeweather0524_domain_Weather_description" property="description" z="0wdVwaqjz6sxP6iwWX4dcwt8QD0="/>
+            <table:column date="true" dateTimePattern="${weather_mydate_date_format}" id="c_javaeeweather0524_domain_Weather_Mydate" property="mydate" z="5OoqNveEf3Z+dN3CMepGoN1Q1P0="/>
+            <table:column id="c_javaeeweather0524_domain_Weather_Myid" property="myid" z="phdVY1OeRUXbtpKS/7aQ2Nv5LrA="/>
+            <table:column id="c_javaeeweather0524_domain_Weather_city" property="city" z="KN6DmFOsvqurHD7uiTkrrAo1T1E="/>
+        </table:table>
+    </page:list>
+</div>

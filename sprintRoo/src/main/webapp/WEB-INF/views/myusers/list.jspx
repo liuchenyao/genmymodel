@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_javaeeweather0524_domain_MyUser" items="${myusers}" z="J6ldZHwBvGxdb9G6LYJUOCw7rPU=">
+        <table:table data="${myusers}" id="l_javaeeweather0524_domain_MyUser" path="/myusers" z="Do+b8WHvwpyrFdFwDy6BcQ7QiFU=">
+            <table:column id="c_javaeeweather0524_domain_MyUser_Mypassword" property="mypassword" z="mZ9ZShs7s1YO1/QedTlF7wuW6V8="/>
+            <table:column id="c_javaeeweather0524_domain_MyUser_Myid" property="myid" z="rw6P90L0qia71sXFTS9lwAzQiag="/>
+            <table:column id="c_javaeeweather0524_domain_MyUser_Myname" property="myname" z="nRbA4p2K/tx2MdTSMGQ9jeFoa6g="/>
+            <table:column id="c_javaeeweather0524_domain_MyUser_city" property="city" z="sgm771KVPEmE9oJHUZrm3WHJOkU="/>
+        </table:table>
+    </page:list>
+</div>

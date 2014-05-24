@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_javaeeweather0524_domain_Weather" modelAttribute="weather" path="/weathers" versionField="Version" z="cnmtzaKZckenPc+ENg928K0LS70=">
+        <field:input field="temperature" id="c_javaeeweather0524_domain_Weather_temperature" required="true" z="bVQQrUxFfkS9W4YiC6anvb7aBmE="/>
+        <field:input field="description" id="c_javaeeweather0524_domain_Weather_description" required="true" z="vRr6xJR2faScRd1MI6lDsoddgQA="/>
+        <field:datetime dateTimePattern="${weather_mydate_date_format}" field="Mydate" id="c_javaeeweather0524_domain_Weather_Mydate" required="true" z="6jsPTOHv0AjohxzdoG8hfnShuEY="/>
+        <field:input field="Myid" id="c_javaeeweather0524_domain_Weather_Myid" required="true" z="QPc+lKVkgcp0u6mAmnoQFZESg0w="/>
+        <field:select field="city" id="c_javaeeweather0524_domain_Weather_city" itemValue="id" items="${citys}" path="/citys" z="vG49AZrklVRt9V+vp4rFMm9Nk1w="/>
+    </form:update>
+</div>

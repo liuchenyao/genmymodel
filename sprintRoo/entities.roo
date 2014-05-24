@@ -1,0 +1,35 @@
+
+# Entities and attributes
+
+entity jpa --class ~.domain.Weather  --sequenceName WEATHER_SEQ
+	field number --fieldName temperature --type java.lang.Integer --primitive --notNull
+	field string --fieldName description --notNull
+	field date --fieldName Mydate --type java.util.Date --notNull
+	field number --fieldName Myid --type java.lang.Long --primitive --notNull
+	
+entity jpa --class ~.domain.City  --sequenceName CITY_SEQ
+	field number --fieldName Myid --type java.lang.Long --primitive --notNull
+	field string --fieldName Myname --notNull
+	
+entity jpa --class ~.domain.MyUser  --sequenceName MYUSER_SEQ
+	field string --fieldName Mypassword --notNull
+	field number --fieldName Myid --type java.lang.Long --primitive --notNull
+	field string --fieldName Myname --notNull
+	
+
+
+# Start of user code for entities and atributes
+
+# End of user code
+
+# References (relations between entities)
+field reference --fieldName city --type ~.domain.City --class  ~.domain.Weather --cardinality MANY_TO_ONE
+field set --fieldName weather --type ~.domain.Weather --class  ~.domain.City --cardinality ONE_TO_MANY
+field set --fieldName Myuser --type ~.domain.MyUser --class  ~.domain.City --cardinality MANY_TO_MANY
+field set --fieldName city --type ~.domain.City --class  ~.domain.MyUser --cardinality MANY_TO_MANY
+
+
+# Start of user code for references
+
+# End of user code for references
+

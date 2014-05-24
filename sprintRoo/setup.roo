@@ -1,0 +1,10 @@
+project --topLevelPackage javaEEWeather0524 --projectName javaEEWeather0524
+
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+
+logging setup --level INFO
+
+# Start of user code for setup
+
+# End of user code for setup
+
